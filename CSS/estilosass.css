@@ -1,0 +1,224 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none; }
+
+/*Inicio de css*/
+/*COLORES*/
+/*FUENTE*/
+/*NAV INDEX*/
+header ul li {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 18px;
+  font-weight: 100; }
+
+/*BODY INDEX*/
+.IndexNav {
+  background-size: cover;
+  background-position: center center;
+  text-decoration: none;
+  list-style: none;
+  animation-name: imagenes;
+  animation-duration: 25s;
+  animation-iteration-count: infinite; }
+  @media only screen and (max-height: 600px) {
+    .IndexNav {
+      height: 520px; } }
+  @media only screen and (min-height: 600px) {
+    .IndexNav {
+      height: 690px; } }
+  @media only screen and (min-height: 768px) {
+    .IndexNav {
+      height: 770px; } }
+  @media only screen and (min-height: 858px) {
+    .IndexNav {
+      height: 840px; } }
+  @media only screen and (min-height: 992px) {
+    .IndexNav {
+      height: 970px; } }
+  @media only screen and (min-height: 1200px) {
+    .IndexNav {
+      height: 1250px; } }
+  .IndexNav .Rambla {
+    font-family: "Reem Kufi", sans-serif;
+    text-align: center;
+    font-size: 100px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: end;
+    padding-top: 20%; }
+    @media only screen and (max-width: 600px) {
+      .IndexNav .Rambla {
+        font-size: 60px;
+        padding-top: 40%; } }
+    @media only screen and (min-height: 768px) {
+      .IndexNav .Rambla {
+        padding-top: 30%; } }
+
+@keyframes imagenes {
+  0% {
+    background-image: url(../Imagenes/Entrega.png); }
+  25% {
+    background-image: url(../Imagenes/Entrada.png); }
+  50% {
+    background-image: url(../Imagenes/Vaso.png); }
+  75% {
+    background-image: url(../Imagenes/Max.png); }
+  100% {
+    background-image: url(../Imagenes/Cafecito.png); } }
+
+/*FOOTER*/
+footer {
+  font-family: 'Reem Kufi', sans-serif;
+  background-color: rgba(2, 68, 85, 0.767);
+  display: flex;
+  color: whitesmoke;
+  font-size: 11px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 2%; }
+
+/* BODY CONTACTO*/
+.Contacto, .Patisserie, .Cafe, .Nosotros, .eShop {
+  background-image: url(../Imagenes/Ella.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%; }
+  .Contacto .card, .Patisserie .card, .Cafe .card, .Nosotros .card, .eShop .card {
+    margin-bottom: 20px; }
+
+#IG {
+  color: rgba(2, 68, 85, 0.767); }
+
+img {
+  margin: 10px; }
+
+main div {
+  font-family: "Reem Kufi", sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 15px; }
+
+main ul {
+  color: #b8b3b3;
+  text-align: center; }
+
+/* BODY PATISSERIE*/
+.Patisserie {
+  background-image: url(../Imagenes/LLuvia.png); }
+  .Patisserie h1 {
+    font-family: "Reem Kufi", sans-serif;
+    color: whitesmoke;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; }
+  .Patisserie .Strong {
+    font-weight: bold;
+    color: whitesmoke; }
+
+/* BODY NUESTRO CAFE */
+.Cafe {
+  background-image: url(../Imagenes/Granos.png); }
+  .Cafe .section-heading .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500; }
+  .Cafe .section-heading .section-heading .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100; }
+  .Cafe .MenuCafe {
+    color: black;
+    background-color: #f6e1c59d;
+    font-size: 15px;
+    font-family: "Reem Kufi", sans-serif;
+    margin-left: 50px;
+    margin-right: 50px; }
+  .Cafe .Granos-faded {
+    color: black;
+    background-color: #f6e1c5;
+    font-size: 15px;
+    font-family: "Reem Kufi", sans-serif;
+    position: relative;
+    bottom: 100px; }
+
+/* BODY NOSOTROS*/
+.Nosotros {
+  background-image: url(../Imagenes/Ellos.png);
+  height: 450px; }
+
+.team {
+  font-family: "Reem Kufi", sans-serif;
+  background-color: rgba(240, 235, 235, 0.493); }
+  .team .team-member {
+    margin-bottom: 3rem;
+    text-align: center; }
+    .team .team-member h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0; }
+    .team .team-member img {
+      width: 14rem;
+      height: 14rem;
+      border: 0.5rem solid rgba(0, 0, 0, 0.1); }
+    .team .team-member img:hover {
+      transform: scale(1.3, 1.3); }
+    .team .team-member #IG {
+      margin-top: 0;
+      border: none;
+      height: 35px;
+      width: 35px;
+      transform: none; }
+
+/* BODY PEDIDOS*/
+.eShop {
+  background-image: url(../Imagenes/takeway.png);
+  font-family: "Reem Kufi", sans-serif;
+  color: rgba(2, 68, 85, 0.767); }
+  .eShop h1 {
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center; }
+  .eShop h2 {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; }
+  .eShop p {
+    display: flex;
+    justify-content: center;
+    font-size: 15px; }
+  .eShop h3 {
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 30px;
+    display: flex;
+    justify-content: center; }
+  .eShop .pedido {
+    background-color: #f1e6d69a; }
+    .eShop .pedido h2 {
+      color: rgba(2, 68, 85, 0.767);
+      text-decoration-line: underline; }
+  .eShop .TC {
+    color: #535151; }
+
+#table {
+  color: grey; }
+
+#total {
+  color: #535151;
+  font-weight: bolder;
+  font-size: 25px; }
+
+#clear {
+  background-color: #535151; }

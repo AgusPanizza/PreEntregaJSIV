@@ -1,0 +1,326 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    }
+    /*Inicio de css*/
+
+/*COLORES*/ 
+$ColorRambla: whitesmoke;
+$ColorContacto: black;  
+$ColorPatisserie: rgb(184, 179, 179);
+$ColorFooter: rgba(2, 68, 85, 0.767);
+
+/*FUENTE*/
+$FuenteRambla: 'Reem Kufi', sans-serif;
+
+
+/*NAV INDEX*/
+header{
+    ul{
+       li{
+           font-family:$FuenteRambla; 
+           font-size: 18px;
+           font-weight: 100;    
+       }
+   }
+}
+
+/*BODY INDEX*/
+.IndexNav{
+  background-size:cover;
+  background-position: center center;
+  text-decoration: none;
+  list-style: none;
+  animation-name: imagenes;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+
+  @media  only screen and (max-height: 600px){
+    height: 520px;
+      }
+
+  @media  only screen and (min-height: 600px){
+    height: 690px;
+      }
+
+  @media  only screen and (min-height: 768px){
+    height: 770px;
+      }
+
+  @media  only screen and (min-height: 858px){
+    height: 840px;
+        }
+  
+  @media  only screen and (min-height: 992px){
+    height: 970px;
+          }
+  
+  @media  only screen and (min-height: 1200px){
+     height: 1250px;
+      }
+
+.Rambla{
+      font-family: $FuenteRambla;
+      text-align: center;
+      font-size: 100px;
+      color: $ColorRambla;
+      display: flex;
+      justify-content: end;
+      padding-top: 20%;
+
+      @media  only screen and (max-width: 600px){
+        font-size: 60px;
+        padding-top: 40%;
+      }
+
+      @media  only screen and (min-height: 768px){
+        padding-top: 30%;
+          }
+  }
+}
+
+@keyframes imagenes{
+  0%{
+    background-image: url(../Imagenes/Entrega.png);
+  }
+
+  25%{
+    background-image: url(../Imagenes/Entrada.png);
+  }
+  
+  50%{
+    background-image: url(../Imagenes/Vaso.png);
+  }
+
+  75%{
+    background-image: url(../Imagenes/Max.png);
+  }
+
+  100%{
+    background-image: url(../Imagenes/Cafecito.png);
+  }
+ }
+
+
+/*FOOTER*/
+footer{
+    font-family: 'Reem Kufi', sans-serif;
+    background-color: rgba(2, 68, 85, 0.767);
+    display: flex;
+    color: whitesmoke;
+    font-size: 11px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 2%;
+    }
+
+/* BODY CONTACTO*/
+.Contacto{
+    background-image: url(../Imagenes/Ella.png);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+
+    .card{
+      margin-bottom: 20px;
+    }
+  }
+
+#IG{
+    color: rgba(2, 68, 85, 0.767) ;
+  }
+
+  img{
+    margin: 10px;
+  }
+
+  main{
+    div{
+    font-family: $FuenteRambla;
+    color:$ColorContacto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 15px;
+    }
+    ul{
+        color: $ColorPatisserie; 
+        text-align:center;
+    }
+    }
+
+/* BODY PATISSERIE*/
+.Patisserie{
+    background-image: url(../Imagenes/LLuvia.png);
+    @extend .Contacto;
+
+    h1{
+      font-family: $FuenteRambla;
+      color: $ColorRambla;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+    }
+
+    .Strong{
+      font-weight: bold;
+      color: $ColorRambla;
+    }
+  }
+
+/* BODY NUESTRO CAFE */
+//MIXIN
+@mixin nicaragua ($colorTexto, $colorFondo, $tamanioTexo, $fuente){
+  color: $colorTexto;
+  background-color: $colorFondo;
+  font-size: $tamanioTexo;
+  font-family: $fuente ;
+}
+
+.Cafe{
+    background-image: url(../Imagenes/Granos.png);
+    @extend .Contacto;
+
+    .section-heading{
+      .section-heading-upper {
+        display: block;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+  
+      .section-heading .section-heading-lower {
+        display: block;
+        font-size: 3rem;
+        font-weight: 100;
+      }
+    }
+  
+    .MenuCafe{
+      @include nicaragua (black, #f6e1c59d ,15px, $FuenteRambla );
+      margin-left: 50px;
+      margin-right: 50px;
+      }
+  
+    .Granos-faded {
+      @include nicaragua (black, #f6e1c5 ,15px, $FuenteRambla );
+      position: relative;
+      bottom: 100px;
+      } 
+}
+
+/* BODY NOSOTROS*/
+.Nosotros{
+  background-image: url(../Imagenes/Ellos.png);
+  @extend .Contacto;
+  height: 450px;
+  }
+  
+  .team{
+    font-family: $FuenteRambla;
+    background-color: rgba(240, 235, 235, 0.493);
+  
+    .team-member {
+      margin-bottom: 3rem;
+      text-align: center;
+  
+      h4 {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+      }
+  
+      img {
+        width: 14rem;
+        height: 14rem;
+        border: 0.5rem solid rgba(0, 0, 0, 0.1);
+      }
+  
+      img:hover{
+        transform: scale(1.3,1.3);
+        }
+      
+      #IG{
+        margin-top: 0;
+        border: none;
+        height: 35px;
+        width: 35px;
+        transform: none;
+        }
+    }
+  }
+
+/* BODY PEDIDOS*/
+.eShop{
+    background-image: url(../Imagenes/takeway.png);
+    @extend .Contacto;
+    font-family: $FuenteRambla;
+    color: $ColorFooter;
+
+    h1{
+        font-weight: bold;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+      }
+
+    h2{
+        color: $ColorRambla;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      p{
+          display: flex;
+          justify-content: center;
+          font-size: 15px;
+      }
+
+      h3{
+        color: $ColorRambla;
+        font-weight: bolder;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pedido{
+        background-color: #f1e6d69a;
+        
+        h2{
+          color: $ColorFooter;
+          text-decoration-line: underline;
+        }
+      }
+
+      .TC{
+        color: rgb(83, 81, 81);   
+      }   
+    }
+      #table{
+        color:grey;
+      }
+
+      #total{
+        color: rgb(83, 81, 81); 
+        font-weight: bolder;
+        font-size: 25px;
+      }
+
+      #clear{
+       background-color: rgb(83, 81, 81);
+      }
+
+
+
+
+
+
